@@ -33,11 +33,11 @@ body{
     left: 0;
 }
 
-.head{
+.snake_head{
     background: red;
 }
 
-.body{
+.snake_body{
     background: #ffcc00;
 }
 
