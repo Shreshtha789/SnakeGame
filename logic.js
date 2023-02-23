@@ -13,7 +13,8 @@ let snakeArr = [{x:5,y:10}];
 
 let food = {x:10,y:5};
 
-
+let score = 0;
+let hiscore = 0;
 
 //Game Function:
 function main(ctime){
@@ -48,10 +49,12 @@ function gameEngine(){
 
     
     if(isCollide(snakeArr)){
+        musicSound.pause();
         inputDir = {x:0 , y:0}
-        alert('gameover');
+        gameOverSound.play();
+        alert('Sorry!! Game Over.. Please press enter to re-start the game');
         snakeArr = [{x:5,y:4}];
-        
+        score = 0;
     }
     
 
@@ -63,10 +66,11 @@ function gameEngine(){
         let a =2;
         let b=16;
         food = {x: Math.round(a+(b-a)*Math.random()), y: Math.round(a+(b-a)*Math.random())};
+        score += 10;
     }
 
     //Moving the snake:
-
+    
     for(let i=snakeArr.length-2; i>=0; i--){
         //to move body
         snakeArr[i+1] = {...snakeArr[i]}; 
@@ -99,11 +103,25 @@ function gameEngine(){
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList = 'food';
     board.appendChild(foodElement);
+
+    //increment the score and hiscore:
+    //scoreboard:
+    let scoreBoard = document.getElementById('scoreBoard');
+    scoreBoard.innerHTML = `Score : ${score}`;
+
+    //hiscore_board:
+    if(hiscore < score){
+        hiscore = score;
+        localStorage.setItem('hiscore',hiscore);
+    }
+    let hiscoreBoard = document.getElementById('hiscoreBoard');
+    let currentHiscore = localStorage.getItem('hiscore');
+    hiscoreBoard.innerHTML = `Hiscore : ${currentHiscore}`;
 }
 
 
 window.addEventListener('keydown', (e)=>{
-
+    musicSound.play();
     moveSound.play();
     switch(e.key){
         case 'ArrowUp':

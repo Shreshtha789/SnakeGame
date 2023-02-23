@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:wght@100&family=New+Tegomin&family=Playfair+Display&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ body{
     grid-template-columns: repeat(18, 1fr);
     background: linear-gradient(to bottom, #006600 0%, #ffcc00 100%);
     margin-left: 60px;
+    border: 0.4vmin solid black;
 }
 
 #logo{
@@ -34,13 +36,40 @@ body{
 }
 
 .snake_head{
-    background: red;
+    background: linear-gradient(to bottom, #cc0000 0%, #ffff00 100%);
+    border: 0.2vmin solid #009900;
+    border-radius: 1.5vmin;
+    transform: scale(1.3);
 }
 
 .snake_body{
-    background: #ffcc00;
+    background: linear-gradient(to bottom, #009900 0%, #ffcc00 100%);
+    border: 0.2vmin solid #009900;
+    border-radius: 2vmin;
 }
 
 .food{
-    background: cyan;
+    background: linear-gradient(to bottom, #003300 0%, #669900 100%);
+    border: 0.2vmin solid #669900;
+    border-radius: 2vmin;
+}
+
+#scoreBoard{
+    font-size: 7vmin;
+    position: absolute;
+    right: 8vmin;
+    top: 5vmin;
+    font-family: 'New Tegomin', serif;
+    font-weight: bold;
+    color: rgb(56, 4, 4);
+}
+
+#hiscoreBoard{
+    font-size: 7vmin;
+    position: absolute;
+    right: 3.8vmin;
+    top: 15vmin;
+    font-family: 'New Tegomin', serif;
+    font-weight: bold;
+    color: rgb(56, 4, 4);
 }
