@@ -73,3 +73,41 @@ body{
     font-weight: bold;
     color: rgb(56, 4, 4);
 }
+
+/*
+#level{
+    font-size: 7vmin;
+    font-family: 'New Tegomin', serif;
+    right: 14vmin;
+    position: absolute;
+    top: 30vmin;
+    font-weight: bolder;
+}
+
+.level_option_easy{
+    font-size: 4vmin;
+    font-family: 'New Tegomin', serif;
+    right: 18vmin;
+    position: absolute;
+    top: 40vmin;
+    font-weight: bolder;
+}
+
+.level_option_medium{
+    font-size: 4vmin;
+    font-family: 'New Tegomin', serif;
+    right: 11vmin;
+    position: absolute;
+    top: 45vmin;
+    font-weight: bolder;
+}
+
+.level_option_hard{
+    font-size: 4vmin;
+    font-family: 'New Tegomin', serif;
+    right: 15vmin;
+    position: absolute;
+    top: 50vmin;
+    font-weight: bolder;
+}
+*/
