@@ -16,12 +16,13 @@ body{
 
 #board{
     height: 89vmin;
-    width: 40vmax;
+    width: 45vmax;
     background: linear-gradient(to bottom, #99ffcc 0%, #ccff33 100%);
     display: grid;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
     background: linear-gradient(to bottom, #006600 0%, #ffcc00 100%);
+    margin-left: 60px;
 }
 
 #logo{
