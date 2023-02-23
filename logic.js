@@ -110,7 +110,7 @@ function gameEngine(){
     scoreBoard.innerHTML = `Score : ${score}`;
 
     //hiscore_board:
-    if(hiscore < score){
+    if(hiscore <= score){
         hiscore = score;
         localStorage.setItem('hiscore',hiscore);
     }
