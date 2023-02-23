@@ -29,17 +29,31 @@ function main(ctime){
 window.requestAnimationFrame(main);
 
 
-function isCollide(){
-    return true;
+function isCollide(snakeArr){
+    //if snake bump into himself
+    for(let i=1; i<snakeArr.length; i++){
+        if(snakeArr[0].x === snakeArr[i].x && snakeArr[0].y === snakeArr[i].y){
+            return true;
+    }
+    }
+    //if snake bump to wall
+    if(snakeArr[0].x >= 18 || snakeArr[0].y >= 18 || snakeArr[0].x <= 0 || snakeArr[0].y <= 0){
+        return true;
+    }
 }
 
 
 function gameEngine(){
     //Part: 1 Updating the snake array and food.
 
+    
     if(isCollide(snakeArr)){
+        inputDir = {x:0 , y:0}
+        alert('gameover');
+        snakeArr = [{x:5,y:4}];
         
     }
+    
 
     //If you have eaten the food, increment the score and regenerate the food.
 
