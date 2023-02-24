@@ -15,6 +15,7 @@ let food = {x:10,y:5};
 
 let score = 0;
 let hiscore = 0;
+let local = localStorage.setItem('hiscore',hiscore);
 
 //Game Function:
 function main(ctime){
@@ -110,9 +111,9 @@ function gameEngine(){
     scoreBoard.innerHTML = `Score : ${score}`;
 
     //hiscore_board:
-    if(hiscore <= score){
+    if(hiscore < score){
         hiscore = score;
-        localStorage.setItem('hiscore',hiscore);
+        local = localStorage.setItem('hiscore',hiscore);
     }
     let hiscoreBoard = document.getElementById('hiscoreBoard');
     let currentHiscore = localStorage.getItem('hiscore');
